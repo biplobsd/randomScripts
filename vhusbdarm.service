@@ -1,0 +1,12 @@
+[Unit]
+Description=VirtualHere USB Server
+After=network.target
+
+[Service]
+ExecStart=/home/pi/vhusbdarm
+WorkingDirectory=/home/pi
+Restart=on-failure
+User=pi
+
+[Install]
+WantedBy=multi-user.target
