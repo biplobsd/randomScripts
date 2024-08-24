@@ -1,0 +1,15 @@
+[Unit]
+Description=Fan Control Service
+After=network.target multi-user.target
+DefaultDependencies=no
+
+[Service]
+ExecStart=/usr/bin/python3 /home/pi/fan_control.py
+WorkingDirectory=/home/pi
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=root
+
+[Install]
+WantedBy=basic.target
